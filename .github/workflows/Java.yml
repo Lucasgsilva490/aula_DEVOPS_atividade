@@ -25,7 +25,11 @@ jobs:
       run: |
        cd src
        javac -cp . Main.java
+    - name: Compilando Teste
+      run: |
+        cd src
+        javac -cp . ClassTest.java
     - name: Rodando o Programa
       run: |
        cd src
-       java -cp . Main
+       java -cp . ClassTest.java
