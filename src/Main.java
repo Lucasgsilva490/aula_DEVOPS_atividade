@@ -1,19 +1,32 @@
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         ArrayList<RH> funcionarios = new ArrayList<>();
-        RH funcionario1 = new RH("Mirella", "48773923869", "40028922", new Date(), new Date(), "noite");
-        RH funcionario2 = new RH("Lucas", "48558381869", "22982004", new Date(), new Date(), "Manhã");
-        RH funcionario3 = new RH("João","joao victor lista da silva", "123456789", new Date(), new Date(), "Tarde");
+        Scanner ismael = new Scanner(System.in);
 
-        funcionarios.add(funcionario1);
-        funcionarios.add(funcionario2);
-        funcionarios.add(funcionario3);
+        String continuar = "s";
 
-        System.out.println(funcionario1.toString());
-        System.out.println(funcionario2.toString());
-        System.out.println(funcionario3.toString());
+        while(continuar.equals("s")){
+            System.out.println("insira o nome");
+            String nome = ismael.next();
+            System.out.println("insira o CPF");
+            String cpf = ismael.next();
+            System.out.println("insira telefone");
+            String telefone = ismael.next();
+            System.out.println("insira periodo");
+            String periodo = ismael.next();
+
+            RH funcionario = new RH(nome, cpf, telefone, new Date(), new Date(), periodo);
+            funcionarios.add(funcionario);
+            System.out.println("deseja continuar? s/n");
+            String continu = ismael.next();
+            continuar = continu;
+        }
+
+
+        System.out.println(funcionarios.toString());
     }
 }
