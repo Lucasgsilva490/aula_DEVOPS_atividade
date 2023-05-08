@@ -37,9 +37,9 @@ jobs:
     - uses: mr-smithers-excellent/docker-build-push@v6
     - name: Deploy docker image
       with:
-        image: lucasgsilva490/aula_maven_ff
-        tags: 1.0
-        registry: docker.io
-        dockerfile: dockerfile
-        username: Lucasgsilva490
-        password: ${{ secrets.DOCKER_PASSWORD }}
+          image: lucasgsilva490/aula_maven_ff
+          tags: 1.0
+          registry: docker.io
+          dockerfile: dockerfile
+          username: Lucasgsilva490
+          password: ${{ secrets.DOCKER_PASSWORD }}
